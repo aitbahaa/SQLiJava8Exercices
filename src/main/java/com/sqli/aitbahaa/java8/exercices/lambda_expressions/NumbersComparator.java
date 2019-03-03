@@ -5,13 +5,8 @@ import java.util.function.Predicate;
 
 public class NumbersComparator {
 
-    private static boolean test(Integer number) {
-        return number % 2 == 0;
-    }
-
     public boolean isEven(Integer number) {
-
-        Predicate<Integer> oddPredicate = NumbersComparator::test;
+        Predicate<Integer> oddPredicate = num -> num % 2 == 0;
 
         return  oddPredicate.test(number);
     }
